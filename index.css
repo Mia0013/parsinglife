@@ -1,0 +1,63 @@
+:root {
+    --black: #121212;
+    --white: #ffffff;
+    --purple: #3d3042;
+}
+
+
+body {
+    background-color: var(--black);
+    color: var(--white);
+    font-family: "Roboto";
+}
+
+.text-header {
+    font-size: 3em;
+    text-align: left;
+}
+
+.text-paragraph {
+    font-size: 1.5em;
+    text-align: match-parent;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("Roboto-regular.otf"); 
+}
+
+#main-container {
+    height: 100%;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+#page-container {
+    position: relative;
+    min-height: 100vh;
+}
+
+.header-image {
+    margin-top: 0; /* In css comments are different qt */
+    margin-left: 0;
+    margin-right: 0;
+    padding: 30px;
+    text-align: center;
+    background: var(--purple);
+    color: var(--white);
+    font-size: 4em;
+}
+
+.big-img {
+    text-align: center;
+    justify-content: center;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+}
