@@ -1,15 +1,30 @@
 :root {
     --black: #121212;
     --white: #ffffff;
-    --purple: #3d3042;
+    --bg: #272838;
+    --header-l: #7D6B91;
+    --header-r: #5D536B;
 }
 
 
 body {
-    background-color: var(--black);
+    background-color: var(--bg);
     color: var(--white);
     font-family: "Roboto";
 }
+
+body::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: var(--header-r);
+  }
+  
+  body::-webkit-scrollbar-thumb {
+     background: var(--header-l);/*#7d0f1f;*/
+    
+  }
 
 .text-header {
     font-size: 3em;
@@ -19,6 +34,8 @@ body {
 .text-paragraph {
     font-size: 1.5em;
     text-align: match-parent;
+    background:  var(--header-r);
+    padding: 20px;
 }
 
 @font-face {
@@ -34,6 +51,7 @@ body {
     margin-top: 40;
     display: grid;
     grid-template-columns: 50% 50%;
+    grid-auto-flow: column;
 }
 
 #page-container {
@@ -47,17 +65,22 @@ body {
     margin-right: 0;
     padding: 30px;
     text-align: center;
-    background: var(--purple);
+    background: linear-gradient(var(--header-l), var(--header-r));
     color: var(--white);
     font-size: 4em;
 }
 
-.big-img {
+.image-left {
     text-align: center;
     justify-content: center;
+    
 }
 
 .flex {
     display: flex;
     justify-content: center;
+}
+
+.text-paragraph .image-left {
+    padding: 4em;
 }
